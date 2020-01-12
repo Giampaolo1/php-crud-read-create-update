@@ -45,9 +45,18 @@ function getConfigurazioni(){
   });
 }
 
+function changeConf(){
+  var me = $(this);
+  var id = me.data("id");
+
+  console.log("id", id);
+}
+
 function init() {
 
   getConfigurazioni();
+
+  $(this).on("click", ".changeConf", changeConf);
 
 }
 
