@@ -1,19 +1,27 @@
-function printConfigurazioni(confs) {
+function resetMe (){
+  var target = $("#container");
+  target.html('');
+}
 
-  resetMe();
+function printConfigurazioni(configurazioni) {
+
+  // aggiunto dopo:
+  if (configurazioni.length > 0) {
+    resetMe();
+  }
 
   var target = $("#container");
-
   var template = $("#box-template").html();
   var compiled = Handlebars.compile(template);
 
-  for (var i=0;i<confs.length;i++) {
+  // le chiavi sono uguali alle colonne della tebella, quindi la parte di riorganizzazione dei dati non ci serve
 
-    var conf = confs[i];
+  for (var i=0;i<configurazioni.length;i++) {
+
+    var conf = configurazioni[i];
     var confHTML = compiled(conf);
 
     target.append(confHTML);
-  }
 }
 
 function getConfigurazioni(){
@@ -24,7 +32,9 @@ function getConfigurazioni(){
     method: "GET",
     success: function(data) {
 
-      console.log("data", data);
+      // console.log("data", data);
+      // Print
+      printConfigurazioni(data);
     },
     error: function(error) {
 
@@ -34,7 +44,9 @@ function getConfigurazioni(){
 }
 
 function init() {
+
   getConfigurazioni();
+
 }
 
 $(window).ready(init);
