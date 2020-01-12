@@ -33,11 +33,12 @@ N.B.: qualunque scelta di front-end sara' tollerata -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js" charset="utf-8"></script>
     <!-- TEMPLATE: MESSAGE MENU -->
     <script id="box-template" type="text/x-handlebars-template">
+      <input class="changeConf" type="button" name="" value="Change me" data-id="{{id}}">
       <p>[{{ id }}] {{ title }} - {{ description }}</p>
     </script>
 
     <!-- CSS: MY STYLE -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <!-- JS: MY SCRIPT -->
     <script src="script.js" charset="utf-8"></script>
 

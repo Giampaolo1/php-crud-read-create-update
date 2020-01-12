@@ -22,7 +22,9 @@ function printConfigurazioni(configurazioni) {
     var confHTML = compiled(conf);
 
     target.append(confHTML);
+  }
 }
+
 
 function getConfigurazioni(){
 
