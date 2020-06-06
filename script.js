@@ -1,7 +1,8 @@
 // GOAL:
-// creare una pagina che stampi tutte le configurazioni presenti nel DB. Dare inoltre la possibilita' di aggiungere una nuova configurazione (titolo e descrizione) e tentare l'approccio per una update (aggiornamento di una configurazione esistente).
+// creare una pagina che stampi tutte le configurazioni presenti nel DB.
+// Dare inoltre la possibilita' di aggiungere una nuova configurazione (titolo e descrizione)
+// e tentare l'approccio per una update (aggiornamento di una configurazione esistente).
 // in caso di prematura riuscita di tutto l'esercizio procedere con l'eliminazione di una configurazione esistente
-// N.B.: qualunque scelta di front-end sara' tollerata -->
 
 
 function resetMe (){
@@ -38,6 +39,7 @@ function getConfigurazioni(){
 
     url: "getAllConfigurazioni.php",
     method: "GET",
+    // dentro la var data mi trovo l array php (configurazioni) tradotto in json
     success: function(data) {
 
       // console.log("data", data);
