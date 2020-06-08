@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
     <!-- J query -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- JS -->
@@ -27,9 +29,9 @@
 
     <form id="myForm">
     <label for="name">Name:</label>
-    <input type="text" name="name" value="new n deb"><br>
+    <input type="text" name="name" value=""><br>
     <label for="lastname">Lastname:</label>
-    <input type="text" name="lastname" value="new s deb"><br>
+    <input type="text" name="lastname" value=""><br>
     <input type="submit" name="submit" value="Nuova persona">
     </form>
 

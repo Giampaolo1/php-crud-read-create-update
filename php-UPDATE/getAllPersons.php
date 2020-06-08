@@ -23,7 +23,7 @@
   $sql = "
 
   SELECT * FROM persons
-  
+
   ";
 
   // scaricare i risultati
@@ -36,9 +36,9 @@
   }
 
   // Chiudiamo la connessione
-
   $conn -> close();
 
+  // codifichiamo
   echo json_encode($persons);
 
 

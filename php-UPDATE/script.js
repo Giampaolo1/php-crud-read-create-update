@@ -40,7 +40,7 @@ function getData() {
 
       printData(data);
 
-      console.log("data", data);
+      // console.log("data", data);
     },
     error: function(err) {
 
@@ -74,13 +74,35 @@ function changePers() {
   var me = $(this);
   var id = me.data("id");
 
-  console.log("id", id);
+  var newName = prompt("new name");
+  var newLastname = prompt("new lastname");
+
+  $.ajax({
+
+    url:"updatePerson.php",
+    data: {
+      id: id,
+      name:newName,
+      lastname: newLastname,
+    },
+    method: "POST",
+    success: function(data) {
+      // console.log("data", data);
+      if (data) {
+        getData();
+      }
+    },
+    error: function(error) {
+      console.log("error", error);
+    }
+  });
+  // console.log("id", id);
 }
 
 function init() {
   getData();
   $("#myForm").submit(putNewPerson);
-  $(window).on("click", ".changePers", changePers);
+  $(this).on("click", ".changePers", changePers);
 }
 
 $(document).ready(init);

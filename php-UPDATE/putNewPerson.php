@@ -47,4 +47,8 @@
   $stmt->bind_param("ss", $name, $lastname);
 
   $res = $stmt -> execute();
+
+  // Chiudiamo la connessione
+  $conn -> close();
+
   echo json_encode($res);
